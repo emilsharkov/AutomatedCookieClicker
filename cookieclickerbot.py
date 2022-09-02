@@ -1,22 +1,27 @@
 from cmath import inf
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
+#intializes bot
 service = Service(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 driver.get('https://orteil.dashnet.org/cookieclicker/')
 actions = ActionChains(driver)
 productList = ['product0','product1','product2']
 
-language = driver.find_element(By.ID, "langSelect-EN")
+#selects English to start game
+language = WebDriverWait(driver, timeout=15).until(lambda d: d.find_element(By.ID, "langSelect-EN"))
+print(language)
 actions.click(language)
 actions.perform()
 
 cookie = driver.find_element(By.ID, "bigCookie")
 
+#continuously clicks cookie and upgrades by minimum priced item
 while 1 != 0:
     actions.click(cookie)
     actions.perform()

@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 #intializes bot
 service = Service(executable_path=ChromeDriverManager().install())
@@ -24,7 +25,8 @@ cookie = WebDriverWait(driver, timeout=15).until(lambda d: d.find_element(By.ID,
 
 #continuously clicks cookie and upgrades by minimum priced item
 while 1 != 0:
-    WebDriverWait(driver, timeout=15).until(EC.element_to_be_clickable(cookie))
+    # WebDriverWait(driver, timeout=15).until(EC.presence_of_element_located((By.ID, "bigCookie")))
+    sleep(5)
     actions.click(cookie)
     actions.perform()
 

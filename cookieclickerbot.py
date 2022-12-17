@@ -22,11 +22,11 @@ actions.click(language)
 actions.perform()
 
 cookie = WebDriverWait(driver, timeout=15).until(lambda d: d.find_element(By.ID, "bigCookie"))
+sleep(8)
 
 #continuously clicks cookie and upgrades by minimum priced item
 while 1 != 0:
-    # WebDriverWait(driver, timeout=15).until(EC.presence_of_element_located((By.ID, "bigCookie")))
-    sleep(5)
+    WebDriverWait(driver, timeout=15).until(EC.presence_of_element_located((By.ID, "bigCookie")))
     actions.click(cookie)
     actions.perform()
 

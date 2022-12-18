@@ -1,6 +1,6 @@
 # AutomatedCookieClicker
 
-Automated Cookie Clicker is a bot that uses Python's Selenium WebDriver API to play the Cookie Clicker from https://orteil.dashnet.org/cookieclicker/ instead of you.
+Automated Cookie Clicker is a bot that uses Python's Selenium WebDriver API to play the game Cookie Clicker from https://orteil.dashnet.org/cookieclicker/ instead of you.
 
 ## Requirements
 

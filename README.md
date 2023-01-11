@@ -14,7 +14,7 @@ Step 3: Navigate to the clone repository and run ```pip install -r requirements.
 
 ## Usage
 
-Step 4: In the terminal, type ```python3 cookieclickerbot.py``` to run the bot
+Step 4: In the terminal, type ```python cookieclickerbot.py``` to run the bot
 
 Step 5: Leave the bot idle and watch the bot beat your score!
 
